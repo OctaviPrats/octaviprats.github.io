@@ -1,0 +1,73 @@
+@import '@/@Theme/_colors.scss';
+@import '@/@Theme/_animations.scss';
+
+.list {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    min-width: 400px;
+    max-width: 400px;
+    background-color: $bg_primary;
+    box-shadow: 0px 0px 80px -20px #73D393;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+
+    &__title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        span {
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        .typing__border {
+            border-bottom: solid 3px rgba($color: $color_primary, $alpha: 1.0);
+            position: absolute;
+            right: -7px;
+            width: 20px;
+            bottom: 0px;
+          }
+        /* Animation */
+        .typing {
+        animation: animated-text 3s steps(30,end) 1s 1 normal both;
+            &__border {
+                animation: animated-cursor 600ms steps(30,end) infinite;
+            }
+        }
+
+    }
+    &__content {
+        padding: 20px 0;
+        p {
+            font-size: 12px;
+            text-align: left;
+            padding: 20px 0;
+            b {
+                font-weight: bold;
+                &.accent {
+                    color: $color_primary;
+                }
+            }
+            a {
+                color:rgba($color: $color_primary, $alpha: 0.5)
+            }
+        }
+
+
+    }
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        path {
+            fill: rgba($color: $color_primary, $alpha: 0.5);
+        }
+    }
+}
