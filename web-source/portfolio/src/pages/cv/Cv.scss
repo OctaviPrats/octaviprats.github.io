@@ -3,11 +3,13 @@
 
 .list {
     display: flex;
+    flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
 }
 .card {
+    margin: 40px;
     min-width: 400px;
     max-width: 400px;
     background-color: $bg_primary;
@@ -57,6 +59,18 @@
             }
             a {
                 color:rgba($color: $color_primary, $alpha: 0.5)
+            }
+            &.center {
+                text-align: center;
+            }
+        }
+        .tech-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img {
+                margin: 0 10px;
             }
         }
 

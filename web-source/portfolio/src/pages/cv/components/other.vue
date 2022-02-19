@@ -1,14 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CvStudies from './components/studies.vue'
-import CvCurrentJob from './components/currentjob.vue'
 
 export default defineComponent({
   name: 'Cv',
-  components: {
-    CvStudies,
-    CvCurrentJob
-  },
   props: {
   },
 });
