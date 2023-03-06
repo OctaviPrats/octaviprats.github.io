@@ -1,5 +1,8 @@
 .home {
   display: flex;
+  width: 80rem;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 .magicContainer {
   position: relative;
@@ -60,10 +63,14 @@
   top: calc(10vh - 1.75rem);
 }
 .presentation {
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.presentation h1 {
+  color: #73d393;
 }
 .skill-list {
   display: flex;

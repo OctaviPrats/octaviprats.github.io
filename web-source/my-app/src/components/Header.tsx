@@ -33,9 +33,9 @@ const HeaderTitle = () => {
       <div className="header">
         <div className="header-left-container">
           <div className={`header-left ${active && "header-left-merged"}`}>
-            <span className="invi">{titleParts.left}</span>
+            <span className="header-text invi">{titleParts.left}</span>
             <span className="header-text main-text">{titleParts.main}</span>
-            <span className="invi">{titleParts.right}</span>
+            <span className="header-text invi">{titleParts.right}</span>
           </div>
         </div>
         <div className="header-right">
