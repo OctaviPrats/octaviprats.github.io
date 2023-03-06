@@ -1,5 +1,13 @@
 .header-container {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 16, 1) 0%,
+    rgba(16, 16, 16, 0) 100%
+  );
+  z-index: 1;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
 }
 .header {
   position: relative;
@@ -32,13 +40,15 @@
 }
 .haeder-right-main-text-merged,
 .main-text {
-  width: 8rem;
+  width: 10rem;
   text-align: center;
 }
 .invi {
   opacity: 0;
 }
-button {
-  position: absolute;
-  top: 100%;
+.header span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
 }

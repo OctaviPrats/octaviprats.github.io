@@ -1,0 +1,84 @@
+.home {
+  display: flex;
+}
+.magicContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.magicBar {
+  background: linear-gradient(
+    180deg,
+    rgba(115, 211, 147, 0.5) 0%,
+    rgba(245, 188, 69, 0.5) 34.38%,
+    rgba(199, 107, 107, 0.5) 65.1%,
+    rgba(211, 115, 190, 0.5) 100%
+  );
+  min-width: 4px;
+  max-width: 4px;
+  height: 100%;
+  border-radius: 1rem;
+}
+.magicTracker {
+  position: absolute;
+  top: 10vh;
+  margin: 0 auto;
+  min-width: 8px;
+  min-height: 16px;
+  background: #fff;
+  border-radius: 3rem;
+}
+
+.home-content {
+  flex: 1;
+}
+
+/* PRESENTATION */
+.home-section {
+  padding-top: calc(10vh - 2rem);
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.home-section-icon {
+  border-radius: 10rem;
+  padding: 1rem;
+  background: #101010
+    radial-gradient(
+      circle at 50% 50%,
+      rgb(115, 211, 147, 0.5) 0%,
+      rgb(115, 211, 147, 0.2) 30%,
+      rgb(115, 211, 147, 0.1) 50%,
+      rgb(115, 211, 147, 0) 70%
+    );
+  position: absolute;
+  display: grid;
+  place-items: center;
+  right: calc(100% + 1.25rem);
+  top: calc(10vh - 1.75rem);
+}
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.skill {
+  background-color: #232323;
+  box-shadow: inset 1px 1px 4px #101010;
+  border-radius: 1.5rem;
+  height: 300px;
+  width: 300px;
+  padding: 1rem 2.5rem;
+  box-sizing: border-box;
+}
