@@ -1,11 +1,13 @@
-import '../src/styles/PageLayout.css'
+import '../style/PageLayout.css'
+import Header from './Header'
+import Footer from './Footer'
+
 const PageLayout = (props: any) => {
   return (
     <div className="main-page">
-      <a href="/">home</a>
-      <a href="/about-me">about me</a>
-      <a href="/projects">projects</a>
+      <Header />
       {props.children}
+      <Footer />
     </div>
   )
 }
