@@ -1,0 +1,44 @@
+.header-container {
+  padding: 1rem 2rem;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.header-left-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+.header-left {
+  display: flex;
+  justify-content: flex-end;
+  transition: 1s all;
+  width: 10rem;
+}
+.header-left-merged {
+  width: 100%;
+}
+.header-right {
+  display: flex;
+}
+.header-right-main-text {
+  width: 0rem;
+  text-align: center;
+  overflow: hidden;
+  transition: 1s all;
+}
+.haeder-right-main-text-merged,
+.main-text {
+  width: 8rem;
+  text-align: center;
+}
+.invi {
+  opacity: 0;
+}
+button {
+  position: absolute;
+  top: 100%;
+}
