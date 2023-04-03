@@ -1,11 +1,9 @@
+import React from "react"
 import "../styles/pages/Home.css"
 const Home = () => {
   return (
     <div className="home">
-      <div className="magicContainer">
-        <div className="magicBar" />
-        <div className="magicTracker" />
-      </div>
+      <MagicScroll />
       <div className="home-content">
         <Presentation />
         <SkillSet />
@@ -16,6 +14,28 @@ const Home = () => {
 }
 
 export default Home
+
+const MagicScroll = () => {
+  const magicTrackerRef = React.useRef<HTMLDivElement>(null)
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (magicTrackerRef.current) {
+        magicTrackerRef.current.style.top = `${Math.max(
+          (window.scrollY / document.body.scrollHeight) * window.innerHeight,
+          window.innerHeight * 0.1,
+        )}px`
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+  return (
+    <div className="magicContainer">
+      <div className="magicBar" />
+      <div ref={magicTrackerRef} className="magicTracker" />
+    </div>
+  )
+}
 
 const Presentation = () => {
   return (
