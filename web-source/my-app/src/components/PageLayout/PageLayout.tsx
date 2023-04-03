@@ -1,6 +1,6 @@
-import "../styles/PageLayout.css"
-import Header from "./Header"
-import Footer from "./Footer"
+import "./PageLayout.css"
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 const PageLayout = (props: any) => {
   return (

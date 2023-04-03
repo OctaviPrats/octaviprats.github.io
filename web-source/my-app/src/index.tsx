@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals"
 import Home from "./pages/Home"
 import AboutMe from "./pages/AboutMe"
 import Projects from "./pages/Projects"
-import PageLayout from "./components/PageLayout"
+import PageLayout from "./components/PageLayout/PageLayout"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const router = createBrowserRouter([
@@ -28,7 +28,7 @@ root.render(
   <React.StrictMode>
     <PageLayout>
       <RouterProvider router={router} />
-    </ PageLayout>
+    </PageLayout>
   </React.StrictMode>,
 )
 
