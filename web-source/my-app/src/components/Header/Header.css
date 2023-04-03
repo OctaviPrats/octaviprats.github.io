@@ -1,9 +1,5 @@
 .header-container {
-  background: linear-gradient(
-    180deg,
-    rgba(16, 16, 16, 1) 0%,
-    rgba(16, 16, 16, 0) 100%
-  );
+  background: linear-gradient(180deg, #101010 0%, rgba(16, 16, 16, 0) 100%);
   z-index: 1;
   padding: 1rem 2rem;
   position: sticky;

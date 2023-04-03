@@ -1,5 +1,7 @@
 import React from "react"
-import "../styles/pages/Home.css"
+import "./Home.css"
+import BusinessCard from "./BusinessCard/BusinessCard"
+
 const Home = () => {
   return (
     <div className="home">
@@ -43,14 +45,6 @@ const Presentation = () => {
       <h1>Hello, I’m a Software Engineer.</h1>
       <p>Coding since 2012, product oriented engineer. FrontEnd Specialized.</p>
       <BusinessCard />
-    </div>
-  )
-}
-
-const BusinessCard = () => {
-  return (
-    <div className="businessCard">
-      <span>business card</span>
     </div>
   )
 }

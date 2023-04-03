@@ -71,6 +71,9 @@
   justify-content: center;
   align-items: center;
 }
+.presentation p {
+  margin-bottom: 5rem;
+}
 .presentation h1 {
   color: #73d393;
 }
