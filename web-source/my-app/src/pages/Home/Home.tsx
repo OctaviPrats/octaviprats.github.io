@@ -68,24 +68,29 @@ const SkillSet = () => {
       <h2>Skills</h2>
       <div className="skill-list">
         <div className="skill">
-          <h3>skill 1</h3>
+          <h3>Technical expertise</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            tincidunt n
+            Deep knowledge and skills in programming languages, frameworks, and
+            tools, along with a strong understanding of software development
+            principles, design patterns, data structures, algorithms, and system
+            architecture.
           </p>
         </div>
         <div className="skill">
-          <h3>skill 2</h3>
+          <h3>Leadership and mentoring</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            tincidunt n
+            Excellent leadership skills, ability to communicate and collaborate
+            effectively, and experience in guiding and mentoring junior software
+            engineers to support their professional growth.
           </p>
         </div>
         <div className="skill">
-          <h3>skill 3</h3>
+          <h3>Problem-solving and critical thinking</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-            tincidunt n
+            Proficiency in problem-solving and critical thinking skills,
+            including analyzing complex technical challenges, identifying root
+            causes, proposing effective solutions, and optimizing software
+            performance through debugging and profiling.
           </p>
         </div>
       </div>

@@ -94,3 +94,12 @@
   padding: 1rem 2.5rem;
   box-sizing: border-box;
 }
+.skill h3 {
+  color: #73d393;
+  text-transform: uppercase;
+}
+.skill p {
+  line-height: 1.2rem;
+  font-size: 0.75rem;
+  text-align: left;
+}
