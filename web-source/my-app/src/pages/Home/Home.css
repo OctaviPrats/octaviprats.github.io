@@ -4,6 +4,7 @@
   max-width: 90vw;
   margin: 0 auto;
 }
+
 .magicContainer {
   position: relative;
   display: flex;
@@ -11,20 +12,20 @@
   align-items: flex-start;
   padding: 0 1rem;
 }
+
 .magicBar {
-  background: linear-gradient(
-    180deg,
-    rgba(115, 211, 147, 0.5) 0%,
-    rgba(245, 188, 69, 0.5) 34.38%,
-    rgba(199, 107, 107, 0.5) 65.1%,
-    rgba(211, 115, 190, 0.5) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(115, 211, 147, 0.5) 0%,
+      rgba(245, 188, 69, 0.5) 34.38%,
+      rgba(199, 107, 107, 0.5) 65.1%,
+      rgba(211, 115, 190, 0.5) 100%);
   min-width: 4px;
   max-width: 4px;
   height: 100%;
   border-radius: 1rem;
   position: absolute;
 }
+
 .magicTracker {
   top: 10vh;
   position: sticky;
@@ -46,24 +47,26 @@
   margin-left: 2rem;
   margin-right: 2rem;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .home-section-icon {
   border-radius: 10rem;
   padding: 1rem;
-  background: #101010
-    radial-gradient(
-      circle at 50% 50%,
+  background: #101010 radial-gradient(circle at 50% 50%,
       rgb(115, 211, 147, 0.5) 0%,
       rgb(115, 211, 147, 0.2) 30%,
       rgb(115, 211, 147, 0.1) 50%,
-      rgb(115, 211, 147, 0) 70%
-    );
+      rgb(115, 211, 147, 0) 70%);
   position: absolute;
   display: grid;
   place-items: center;
   right: calc(100% + 1.25rem);
   top: calc(10vh - 1.75rem);
 }
+
 .presentation {
   height: 75vh;
   display: flex;
@@ -71,17 +74,20 @@
   justify-content: center;
   align-items: center;
 }
+
 .presentation p {
   margin-bottom: 5rem;
 }
+
 .presentation h1 {
   color: #73d393;
 }
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -93,11 +99,15 @@
   width: 300px;
   padding: 1rem 2.5rem;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
+
 .skill h3 {
   color: #73d393;
   text-transform: uppercase;
 }
+
 .skill p {
   line-height: 1.2rem;
   font-size: 0.75rem;

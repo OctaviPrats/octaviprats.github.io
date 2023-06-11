@@ -1,0 +1,9 @@
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(115, 211, 147, 0.05) 0,
+            rgba(115, 211, 147, 0) 70%);
+}
