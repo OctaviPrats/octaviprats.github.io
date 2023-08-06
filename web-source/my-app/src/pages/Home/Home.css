@@ -77,10 +77,13 @@
 
 .presentation p {
   margin-bottom: 5rem;
+  max-width: 60vw;
+  text-align: center;
 }
 
 .presentation h1 {
   color: #73d393;
+  text-align: center;
 }
 
 .skill-list {
