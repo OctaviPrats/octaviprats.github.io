@@ -10,9 +10,9 @@ const Home = () => {
       {/* <MagicScroll /> */}
       <div className="home-content">
         <Presentation />
-        <SkillSet />
+        {/* <SkillSet /> */}
         {/* <CurrentStack /> */}
-        <LastProject />
+        {/* <LastProject /> */}
       </div>
     </div>
   )

@@ -38,10 +38,10 @@ const BusinessCard = () => {
             </div>
           </div>
           <div className="networks">
-            <NetworkItem text="Eterlast" iconName="ic_work" />
-            <NetworkItem text="UPC" iconName="ic_laptop" />
-            <NetworkItem text="/octaviprats" iconName="ic_github" />
-            <NetworkItem text="/octavi-prats" iconName="ic_linkedin" />
+            <NetworkItem text="Eterlast" iconName="ic_work" url="https://www.eterlast.com/" />
+            <NetworkItem text="UPC" iconName="ic_laptop" url="https://www.fib.upc.edu/en" />
+            <NetworkItem text="/octaviprats" iconName="ic_github" url="https://github.com/OctaviPrats" />
+            <NetworkItem text="/octavi-prats" iconName="ic_linkedin" url="https://www.linkedin.com/in/octavi-prats/" />
           </div>
         </div>
       </div>
@@ -51,12 +51,12 @@ const BusinessCard = () => {
 
 export default BusinessCard
 
-const NetworkItem = ({ iconName, text }: any) => {
+const NetworkItem = ({ iconName, text, url }: any) => {
   const iconSize = '32px'
   return (
-    <div className="network-item" >
+    <a href={url} target="_blanc" className="network-item" >
       <img src={`/${iconName}.svg`} alt={iconName} width={iconSize} height={iconSize} />
       <span>{text}</span>
-    </div>
+    </a>
   )
 }
