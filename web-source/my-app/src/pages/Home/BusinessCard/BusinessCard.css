@@ -10,7 +10,6 @@
   align-items: center;
   overflow: hidden;
   box-shadow: 0 0 50px 5px black;
-  font-family: PragmataPro;
   max-width: 90vw;
 }
 
@@ -30,7 +29,7 @@
 }
 
 .businessCard {
-  background-color: black;
+  background-color: #050500;
   width: calc(100% - 3px);
   height: calc(100% - 3px);
   z-index: 1;
@@ -78,7 +77,6 @@
   text-transform: capitalize;
   font-size: 1.7rem;
   font-style: italic;
-  letter-spacing: 0.15rem;
   padding: 1rem 0 0 0;
   margin: 0;
 }
@@ -118,7 +116,6 @@
 .network-item:hover {
   cursor: pointer;
   opacity: 1;
-  background-color: #d373be32;
 }
 
 .network-item img {
