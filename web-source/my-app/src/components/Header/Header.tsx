@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 const titleParts = {
   left: "<",
   right: "/>",
-  main: "OctaviPrats",
+  main: "octadev",
 }
 
 const Header = () => {
@@ -42,7 +42,7 @@ const HeaderTitle = () => {
           <span className="header-text">{titleParts.left}</span>
           <span
             className={`header-right-main-text invi ${
-              active && "haeder-right-main-text-merged"
+              active && "header-right-main-text-merged"
             }`}
           >
             <span>{titleParts.main}</span>

@@ -1,7 +1,7 @@
 import React from "react"
 import "./BusinessCard.css"
 import VanillaTilt from "vanilla-tilt"
-import LofiAnimation from "../../../components/DinoGame/LofiAnimation"
+import LofiAnimation from "src/components/Animations/LofiAnimation"
 
 const BusinessCard = () => {
   const cardRef = React.useRef<HTMLDivElement>(null)
@@ -39,7 +39,7 @@ const BusinessCard = () => {
           </div>
           <div className="networks">
             <NetworkItem text="Eterlast" iconName="ic_work" url="https://www.eterlast.com/" />
-            <NetworkItem text="UPC" iconName="ic_laptop" url="https://www.fib.upc.edu/en" />
+            <NetworkItem text="UPC" iconName="ic_bookmark_book" url="https://www.fib.upc.edu/en" />
             <NetworkItem text="/octaviprats" iconName="ic_github" url="https://github.com/OctaviPrats" />
             <NetworkItem text="/octavi-prats" iconName="ic_linkedin" url="https://www.linkedin.com/in/octavi-prats/" />
           </div>
@@ -55,7 +55,7 @@ const NetworkItem = ({ iconName, text, url }: any) => {
   const iconSize = '32px'
   return (
     <a href={url} target="_blanc" className="network-item" >
-      <img src={`/${iconName}.svg`} alt={iconName} width={iconSize} height={iconSize} />
+      <img src={`${iconName}.svg`} alt={iconName} width={iconSize} height={iconSize} />
       <span>{text}</span>
     </a>
   )
