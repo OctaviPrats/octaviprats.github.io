@@ -1,6 +1,7 @@
 import React from "react"
 import "./Home.css"
 import BusinessCard from "./BusinessCard/BusinessCard"
+import { motion } from "framer-motion"
 
 const Home = () => {
   return (
@@ -9,9 +10,6 @@ const Home = () => {
         <Presentation />
         <PortfolioSimple />
         <SkillSet />
-        {/* <FrameWorks /> */}
-        {/* <CurrentStack /> */}
-        {/* <LastProject /> */}
       </div>
     </div>
   )
@@ -31,7 +29,7 @@ const Presentation = () => {
 
 const SkillSet = () => {
   return (
-    <div className="home-section">
+    <div className="portfolio">
       <div className="portfolio-head">
         <h2>Soft Skills</h2>
         <p>Top three skills that are crucial on my performance.</p>
@@ -69,7 +67,12 @@ const PortfolioSection = () => {
 
 const PortfolioItem = ({ type = 'react', tech = 'tech name', projectName = 'project name', dateText = '', stackList = ['item1'] }: any) => {
   return (
-    <div className="portfolio-item">
+    <motion.div
+      className="portfolio-item"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3, delay: 0.5 }}
+    >
       <div className="portfolio-item-layout">
         <img src={`ic_${type}.svg`} alt="" />
         <div style={{ flex: 1 }}>
@@ -85,19 +88,24 @@ const PortfolioItem = ({ type = 'react', tech = 'tech name', projectName = 'proj
           <span className="portfolio-item-stack-item">{stack}</span>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 const SoftSkill = ({ icon = 'king', title = 'title', desc = 'desc' }: any) => {
   return (
-    <div className="skill">
+    <motion.div
+      className="skill"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <img src={`${icon}.svg`} alt="" />
       <h3>{title}</h3>
       <p>
         {desc}
       </p>
-    </div>
+    </motion.div>
   )
 }
 
