@@ -5,7 +5,7 @@ import MainBackground from "../MainBackground/MainBackground"
 
 const PageLayout = (props: any) => {
   return (
-    <div className="main-page">
+    <div className="main-page background-pattern">
       <Header />
       <MainBackground />
       <div className="main-content">{props.children}</div>
