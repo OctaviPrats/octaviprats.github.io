@@ -32,25 +32,14 @@ const Presentation = () => {
 const SkillSet = () => {
   return (
     <div className="home-section">
+      <div className="portfolio-head">
+        <h2>Soft Skills</h2>
+        <p>Top three skills that are crucial on my performance.</p>
+      </div>
       <div className="skill-list">
-        <div className="skill">
-          <h3>Technical expertise</h3>
-          <p>
-            Advanced knowledge in programming and system design.
-          </p>
-        </div>
-        <div className="skill">
-          <h3>Leadership</h3>
-          <p>
-            Skilled in leading and developing junior engineers.
-          </p>
-        </div>
-        <div className="skill">
-          <h3>Critical thinking</h3>
-          <p>
-            Expert in diagnosing and optimizing software.
-          </p>
-        </div>
+        {SOFT_SKILLS.map((item: any) => (
+          <SoftSkill {...item} />
+        ))}
       </div>
     </div>
   )
@@ -59,37 +48,120 @@ const SkillSet = () => {
 const PortfolioSimple = () => {
   return (
     <div className="portfolio">
-      <h2>Portfolio</h2>
-      <p>Some of the projects I've worked on. (add typing effect)</p>
-      <PortfolioSection type="react" />
-      <PortfolioSection type="vue" />
-      <PortfolioSection type="angular" />
-      <PortfolioSection type="wordpress" />
+      <div className="portfolio-head">
+        <h2>Portfolio</h2>
+        <p>Some of the projects I've worked on. </p>
+      </div>
+      <PortfolioSection />
     </div>
   )
 }
 
-const PortfolioSection = ({ type }: any) => {
+const PortfolioSection = () => {
   return (
-    <div className="portfolio-section">
-      <div className="portfolio-header">
-        <img src={`ic_${type}.svg`} alt="" />
-        <h3>{type}</h3>
-      </div>
-      <div className="portfolio-list">
-        <PortfolioItem />
-        <PortfolioItem />
-        <PortfolioItem />
-      </div>
+    <div className="portfolio-list">
+      {PROJECTS.map((item: any) => (
+        <PortfolioItem {...item} />
+      ))}
     </div>
   )
 }
 
-const PortfolioItem = () => {
+const PortfolioItem = ({ type = 'react', tech = 'tech name', projectName = 'project name', dateText = '', stackList = ['item1'] }: any) => {
   return (
     <div className="portfolio-item">
-      <h4>Project name</h4>
-      <p>Project description</p>
+      <div className="portfolio-item-layout">
+        <img src={`ic_${type}.svg`} alt="" />
+        <div style={{ flex: 1 }}>
+          <div className="portfolio-item-header">
+            <span className="portfolio-item-tech">{tech}</span>
+            <span className="portfolio-item-date">{dateText}</span>
+          </div>
+          <span className="portfolio-item-project-name">{projectName}</span>
+        </div>
+      </div>
+      <div className="portfolio-item-stack-list">
+        {stackList.map((stack: string) => (
+          <span className="portfolio-item-stack-item">{stack}</span>
+        ))}
+      </div>
     </div>
   )
 }
+
+const SoftSkill = ({ icon = 'king', title = 'title', desc = 'desc' }: any) => {
+  return (
+    <div className="skill">
+      <img src={`${icon}.svg`} alt="" />
+      <h3>{title}</h3>
+      <p>
+        {desc}
+      </p>
+    </div>
+  )
+}
+
+const PROJECTS = [
+  {
+    type: 'react',
+    tech: 'React Native',
+    projectName: 'pickem.social',
+    dateText: 'on going',
+    stackList: ['Zustand', 'TanstackQuery', 'Clerk', 'Tamagui']
+  },
+  {
+    type: 'nextjs',
+    tech: 'Next.js',
+    projectName: 'houseofboxing.com',
+    dateText: '2022 - 2023',
+    stackList: ['Chakra.ui', 'immutableX', 'Web3Auth', 'Redux']
+  },
+  {
+    type: 'vue',
+    tech: 'Web Components',
+    projectName: 'Parlem Telecom',
+    dateText: '2021 - 2022',
+    stackList: ['MicroFrontEnds', 'Webpack', 'SASS']
+  },
+
+  {
+    type: 'angular',
+    tech: 'Angular 9',
+    projectName: 'SuperFantasy LOL',
+    dateText: '2019 - 2021',
+    stackList: ['Rx.js', 'Chart.js', 'Particles', 'Stripe']
+  },
+  {
+    type: 'react',
+    tech: 'React',
+    projectName: 'octadev',
+    dateText: 'on going',
+    stackList: ['Lottie', 'VanilaTilt']
+  },
+  {
+    type: 'wordpress',
+    tech: 'PHP',
+    projectName: 'eLaLiga Santander',
+    dateText: '2020',
+    stackList: ['Twig', 'CustomPlugin']
+  },
+
+]
+
+const SOFT_SKILLS = [
+  {
+    icon: 'king',
+    title: 'Leadership',
+    desc: 'Skilled in leading and developing junior engineers.'
+  },
+  {
+    icon: 'tech',
+    title: 'Critical thinking',
+    desc: 'Advanced knowledge in programming and system design.'
+  },
+  {
+    icon: 'game',
+    title: 'Teamwork',
+    desc: 'Experienced in working in dev and product agile teams.'
+  },
+]
