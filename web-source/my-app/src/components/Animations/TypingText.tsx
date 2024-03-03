@@ -8,7 +8,6 @@ export default function TypingText({ text, className, textAlign }: { text: strin
         setTextDisplay([]);
         let i = 0;
         const interval = setInterval(() => {
-            console.info("textArray", i);
             if (i < textArray.length) {
                 setTextDisplay((prevTextDisplay) => [...prevTextDisplay, textArray[i]]);
                 i++;

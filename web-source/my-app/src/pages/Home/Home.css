@@ -1,6 +1,8 @@
 .home {
   display: flex;
   margin: 0 auto;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .magicContainer {
