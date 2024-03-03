@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Home.css"
 import BusinessCard from "./BusinessCard/BusinessCard"
 import { motion } from "framer-motion"
@@ -67,8 +67,10 @@ const PortfolioSection = () => {
 }
 
 const PortfolioItem = ({ type = 'react', tech = 'tech name', projectName = 'project name', dateText = '', stackList = ['item1'] }: any) => {
+  const [showRepoBtn, setShowRepoBtn] = useState(false)
   return (
     <motion.div
+      onClick={() => setShowRepoBtn(!showRepoBtn)}
       className="portfolio-item"
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -89,6 +91,13 @@ const PortfolioItem = ({ type = 'react', tech = 'tech name', projectName = 'proj
           <span className="portfolio-item-stack-item">{stack}</span>
         ))}
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={showRepoBtn ? { opacity: 1, y: 0 } : {}}
+        className="btn-repo"
+      >
+        <img src={`ic_github.svg`} width='1rem' height='10rem' />
+      </motion.div>
     </motion.div>
   )
 }
