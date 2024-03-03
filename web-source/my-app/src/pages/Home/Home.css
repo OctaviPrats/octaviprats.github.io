@@ -86,9 +86,19 @@
   text-align: center;
 }
 
-.presentation h1 {
+.presentation-title {
+  font-size: 2rem;
   color: #73d393;
   text-align: center;
+  font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+  .presentation-title {
+      font-size: 1rem;
+  }
+  .presentation p {
+      font-size: 0.8rem;
+  }
 }
 
 .skill-list {

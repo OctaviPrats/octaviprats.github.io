@@ -2,6 +2,7 @@ import React from "react"
 import "./Home.css"
 import BusinessCard from "./BusinessCard/BusinessCard"
 import { motion } from "framer-motion"
+import TypingText from "src/components/Animations/TypingText"
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ export default Home
 const Presentation = () => {
   return (
     <div className="presentation">
-      <h1>Hello, I’m a Software Engineer.</h1>
+      <TypingText text="Hello, I’m a Software Engineer." className="presentation-title" />
       <p>Coding since 2012, product oriented engineer. FrontEnd Specialized.</p>
       <BusinessCard />
     </div>
